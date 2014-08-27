@@ -1,15 +1,46 @@
-## MAC OS
-.DS_Store
+# Puppet
+pkg/
+metadata.json
 
-## TEXTMATE
-*.tmproj
-tmtags
+# Node.js with Express and Stlyus
+public/css/*.css
+public/css/main/*.css
+public/css/admin/*.css
+/.monitor
 
-## EMACS
-*~
-\#*
-.\#*
+# Eclipse
+/.project
+/.settings
+/.buildpath
 
-## VIM
-*.swp
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+Thumbs.db
+
+# Ignore this in Clock Harness projects because it is created by the build system.
+/Config/vhost.conf
+
+# Vim
+.*.sw[a-z]
+*.un~i
 tags
+
+# OsX
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# nodejs npm modules
+/node_modules
+
+# node-cluster
+/pids
+*.sock
+
+# ZSH Cake plugin cache
+/.cake_task_cache
