@@ -7,11 +7,6 @@
   "source": "https://github.com/thbe/puppet-style.git",
   "project_page": "https://github.com/thbe/puppet-style",
   "issues_url": "https://github.com/thbe/puppet-style/issues",
-  "dependencies": [
-    {
-      "name": "puppetlabs-stdlib",
-      "version_range": ">= 1.0.0"
-    }
-  ]
+  "dependencies": [ ]
 }
 

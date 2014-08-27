@@ -18,11 +18,21 @@ class style::params {
       $linux = true
 
       # Package definition
+      $packageDmidecode       = 'dmidecode'
+      $packageDstat           = 'dstat'
+      $packageIftop           = 'iftop'
+      $packageIotop           = 'iotop'
       $packageHtop            = 'htop'
-      $packageLsb             = 'redhat-lsb'
-      $packageVim             = 'vim'
+      $packageNcftp           = 'ncftp'
+      $packageNmap            = 'nmap'
+      $packageRedhatLsb       = 'redhat-lsb'
+      $packageRsync           = 'rsync'
+      $packageStrace          = 'strace'
+      $packageTree            = 'tree'
+      $packageUnzip           = 'unzip'
+      $packageVim             = 'vim-enhanced'
       $packageWget            = 'wget'
-      $packageXauth           = 'xauth'
+      $packageXauth           = 'xorg-x11-xauth'
 
       # Config definition
       $configProfileConf         = '/etc/profile.d/custom.sh'

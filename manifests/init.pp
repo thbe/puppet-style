@@ -33,18 +33,16 @@
 #
 # Copyright 2014 Thomas Bendler, unless otherwise noted.
 #
-class style {
+class style inherits style::params {
 
   # Start workflow
   if $style::params::linux {
     # Containment
     contain style::package
     contain style::config
-    contain style::service
 
     # Include classes
     Class['style::package'] ->
-    Class['style::config'] ->
-    Class['style::service']
+    Class['style::config']
   }
 }

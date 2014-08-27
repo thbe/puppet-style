@@ -16,7 +16,7 @@ class style::config {
   file {
     $style::params::configProfileConf:
       ensure  => present,
-      mode    => '0755',
+      mode    => '0644',
       owner   => root,
       group   => root,
       path    => $style::params::configProfileConf,

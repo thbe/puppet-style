@@ -15,65 +15,45 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+Style does one simple thing, it make the Linux box look like according to my
+preferences.
 
 ## Module Description
 
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
-
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
+Style installs some packages I need and make some shell customizing.
 
 ## Setup
 
 ### What style affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+* Install dmidecode, dstat, iftop, iotop, htop, ncftp, nmap, redhat-lsb, rsync, strace, tree, unzip,
+  vim-enhanced, wget, xorg-x11-xauth
+* Install /etc/profile.de/custom.sh
 
 ### Beginning with style
 
-The very basic steps needed for a user to get the module up and running.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+Simply include the class and you are done.
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+```puppet
+include '::style'
+```
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
-
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+This module has been built on and tested against Puppet 3.6 and higher.
 
-## Development
+The module has been tested on:
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+* CentOS Linux 6
+* Scientific Linux 6
 
-## Release Notes/Contributors/Etc **Optional**
+Testing on other platforms has been light and cannot be guaranteed.
 
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
+##Development
+
+If you like to add or improve this module, feel free to fork the module and send
+me a merge request with the modification.
