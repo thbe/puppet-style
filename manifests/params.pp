@@ -27,6 +27,7 @@ class style::params {
       $packageNmap            = 'nmap'
       $packageRedhatLsb       = 'redhat-lsb'
       $packageRsync           = 'rsync'
+      $packageScreen          = 'screen'
       $packageStrace          = 'strace'
       $packageTree            = 'tree'
       $packageUnzip           = 'unzip'

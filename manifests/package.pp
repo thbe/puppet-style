@@ -20,6 +20,7 @@ class style::package {
   package { $style::params::packageNmap: ensure => installed; }
   package { $style::params::packageRedhatLsb: ensure => installed; }
   package { $style::params::packageRsync: ensure => installed; }
+  package { $style::params::packageScreen: ensure => installed; }
   package { $style::params::packageStrace: ensure => installed; }
   package { $style::params::packageTree: ensure => installed; }
   package { $style::params::packageUnzip: ensure => installed; }

@@ -15,19 +15,22 @@
 
 ## Overview
 
-Style does one simple thing, it make the Linux box look like according to my
-preferences.
+Style does one simple thing, it make the Linux box look like I think it should look
+like.
 
 ## Module Description
 
-Style installs some packages I need and make some shell customizing.
+This module implement the basic settings I would like to find on every Linux box
+after a minimal install. So, this module install some basic packages and add some
+aliases I use often.
 
 ## Setup
 
 ### What style affects
 
-* Install dmidecode, dstat, iftop, iotop, htop, ncftp, nmap, redhat-lsb, rsync, strace, tree, unzip,
-  vim-enhanced, wget, xorg-x11-xauth
+* Install dmidecode, dstat, iftop, iotop, htop, ncftp, nmap,
+          redhat-lsb, rsync, screen, strace, tree, unzip,
+          vim-enhanced, wget, xorg-x11-xauth
 * Install /etc/profile.de/custom.sh
 
 ### Beginning with style

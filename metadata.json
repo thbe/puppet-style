@@ -1,6 +1,6 @@
 {
   "name": "thbe-style",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "thbe",
   "summary": "This module personalize the Linux in a way I like to work",
   "license": "GPLv3",
@@ -9,4 +9,3 @@
   "issues_url": "https://github.com/thbe/puppet-style/issues",
   "dependencies": [ ]
 }
-
