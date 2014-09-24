@@ -2,10 +2,15 @@
   "name": "thbe-style",
   "version": "0.1.1",
   "author": "thbe",
-  "summary": "This module personalize the Linux in a way I like to work",
+  "summary": "This module personalize the Linux box in a way I like to work with the box",
   "license": "GPLv3",
   "source": "https://github.com/thbe/puppet-style.git",
   "project_page": "https://github.com/thbe/puppet-style",
   "issues_url": "https://github.com/thbe/puppet-style/issues",
-  "dependencies": [ ]
+  "dependencies": [
+    {
+      "name": "thbe-yum",
+      "version_range": ">= 0.4.6"
+    }
+  ]
 }
