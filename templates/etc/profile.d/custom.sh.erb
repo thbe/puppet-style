@@ -144,3 +144,22 @@ ii() {
   echo -e "\nPublic facing IP Address:  " ; myip
   echo
 }
+
+# GIT specific aliases
+alias gst='git status'
+alias gco='git checkout'
+alias gci='git commit'
+alias grb='git rebase'
+alias gbr='git branch'
+alias gad='git add -A'
+alias gpl='git pull'
+alias gpu='git push'
+alias gsw='git show'
+alias glo='git log --oneline'
+alias glg='git log --date-order --all --graph --format="%C(green)%h %G? %Creset %C(yellow)%an%Creset %C(blue bold)%ad%Creset %C(red bold)%d%Creset%s"'
+alias glg2='git log --date-order --all --graph --name-status --format="%C(green)%H %G?%Creset %C(yellow)%an%Creset %C(blue bold)%ad%Creset %C(red bold)%d%Creset%s"'
+alias glg3='git log --date-order --all --graph -p --format="%C(green)%H %G?%Creset %C(yellow)%an%Creset %C(blue bold)%ad%Creset %C(red bold)%d%Creset%s"'
+alias rgit_config='for item in $(ls -1d ./* | grep -E "/$"); do cd $item; echo Config for repository $item; git config --local -l; cd ..; done'
+alias rgit_status='for item in $(ls -1d ./* | grep -E "/$"); do cd $item; echo Checking repository $item; git status -s; cd ..; done'
+alias rgit_pull='for item in $(ls -1d ./* | grep -E "/$"); do cd $item; echo Updating repository $item; git pull -q; cd ..; done'
+alias rgit_push='for item in $(ls -1d ./* | grep -E "/$"); do cd $item; echo Push repository $item; git push; cd ..; done'
