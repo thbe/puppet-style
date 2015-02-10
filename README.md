@@ -47,12 +47,13 @@ include '::style'
 
 ## Limitations
 
-This module has been built on and tested against Puppet 3.6 and higher.
+This module has been built on and tested against Puppet 3.7 and higher.
 
 The module has been tested on:
 
-* CentOS Linux 6
+* RedHat Enterprise Linux 6
 * Scientific Linux 6
+* CentOS Linux 6
 
 Testing on other platforms has been light and cannot be guaranteed.
 
