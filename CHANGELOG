@@ -1,8 +1,11 @@
-0.1.1 2014-09-22 thbe <project@bendler-net.de>
- * Initial release
+0.2.1 2015-02-10 thbe <project@bendler-net.de>
+ * Switch from redhat-lsb to redhat-lsb-core
+
+0.2.0 2015-02-10 thbe <project@bendler-net.de>
+ * Enhance custom profile
 
 0.1.5 2015-02-10 thbe <project@bendler-net.de>
  * Increase forge score
 
-0.2.0 2015-02-10 thbe <project@bendler-net.de>
- * Enhance custom profile
+0.1.1 2014-09-22 thbe <project@bendler-net.de>
+ * Initial release

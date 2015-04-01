@@ -25,7 +25,7 @@ class style::params {
       $packageHtop            = 'htop'
       $packageNcftp           = 'ncftp'
       $packageNmap            = 'nmap'
-      $packageRedhatLsb       = 'redhat-lsb'
+      $packageRedhatLsb       = 'redhat-lsb-core'
       $packageRsync           = 'rsync'
       $packageScreen          = 'screen'
       $packageStrace          = 'strace'
