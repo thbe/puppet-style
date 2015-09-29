@@ -1,3 +1,6 @@
+0.3.1 2015-09-29 thbe <project@bendler-net.de>
+ * Fix dependencies
+
 0.3.0 2015-09-29 thbe <project@bendler-net.de>
  * Add Ubuntu/Debian support
 
