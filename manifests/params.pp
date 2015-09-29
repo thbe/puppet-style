@@ -20,11 +20,17 @@ class style::params {
 
       # Package definition
       $packageRedhatLsb = 'redhat-lsb-core'
+      $packageVim       = 'vim-enhanced'
+      $packageXauth     = 'xorg-x11-xauth'
 
     }
     'Debian' : {
       $linux = true
       $debian = true
+
+      # Package definition
+      $packageVim       = 'vim'
+      $packageXauth     = 'xauth'
     }
     default  : {
       $linux = false
@@ -44,9 +50,7 @@ class style::params {
   $packageStrace             = 'strace'
   $packageTree               = 'tree'
   $packageUnzip              = 'unzip'
-  $packageVim                = 'vim-enhanced'
   $packageWget               = 'wget'
-  $packageXauth              = 'xorg-x11-xauth'
 
   # Config definition
   $configProfileConf         = '/etc/profile.d/custom.sh'
