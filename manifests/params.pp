@@ -16,33 +16,38 @@ class style::params {
   case $::osfamily {
     'RedHat' : {
       $linux = true
+      $redhat = true
 
       # Package definition
-      $packageDmidecode       = 'dmidecode'
-      $packageDstat           = 'dstat'
-      $packageIftop           = 'iftop'
-      $packageIotop           = 'iotop'
-      $packageHtop            = 'htop'
-      $packageNcftp           = 'ncftp'
-      $packageNmap            = 'nmap'
-      $packageRedhatLsb       = 'redhat-lsb-core'
-      $packageRsync           = 'rsync'
-      $packageScreen          = 'screen'
-      $packageStrace          = 'strace'
-      $packageTree            = 'tree'
-      $packageUnzip           = 'unzip'
-      $packageVim             = 'vim-enhanced'
-      $packageWget            = 'wget'
-      $packageXauth           = 'xorg-x11-xauth'
+      $packageRedhatLsb          = 'redhat-lsb-core'
 
       # Config definition
       $configProfileConf         = '/etc/profile.d/custom.sh'
       $configProfileConfTemplate = 'style/etc/profile.d/custom.sh.erb'
+    }
+    'Debian' : {
+      $linux = true
+      $debian = true
     }
     default  : {
       $linux = false
     }
   }
 
-  # Style definitions
+  # Style package definition
+  $packageDmidecode = 'dmidecode'
+  $packageDstat     = 'dstat'
+  $packageIftop     = 'iftop'
+  $packageIotop     = 'iotop'
+  $packageHtop      = 'htop'
+  $packageNcftp     = 'ncftp'
+  $packageNmap      = 'nmap'
+  $packageRsync     = 'rsync'
+  $packageScreen    = 'screen'
+  $packageStrace    = 'strace'
+  $packageTree      = 'tree'
+  $packageUnzip     = 'unzip'
+  $packageVim       = 'vim-enhanced'
+  $packageWget      = 'wget'
+  $packageXauth     = 'xorg-x11-xauth'
 }

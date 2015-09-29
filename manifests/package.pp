@@ -25,8 +25,6 @@ class style::package {
 
   package { $style::params::packageNmap: ensure => installed; }
 
-  package { $style::params::packageRedhatLsb: ensure => installed; }
-
   package { $style::params::packageRsync: ensure => installed; }
 
   package { $style::params::packageScreen: ensure => installed; }
@@ -42,4 +40,8 @@ class style::package {
   package { $style::params::packageWget: ensure => installed; }
 
   package { $style::params::packageXauth: ensure => installed; }
+
+  if $style::params::redhat {
+    package { $style::params::packageRedhatLsb: ensure => installed; }
+  }
 }
