@@ -1,3 +1,6 @@
+0.3.2 2015-10-09 thbe <project@bendler-net.de>
+ * Add switch for puppet agent
+
 0.3.1 2015-09-29 thbe <project@bendler-net.de>
  * Fix dependencies
 
