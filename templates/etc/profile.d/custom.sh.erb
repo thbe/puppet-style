@@ -103,6 +103,9 @@ alias ls='ls --color=auto -CF -h'
 alias ll='ls -l'
 alias la='ll -a'
 
+if [ ! -x /usr/bin/puppet && -l /opt/puppetlabs/bin/puppet ]; then
+  alias puppet='/opt/puppetlabs/bin/puppet'
+fi
 alias facter='facter -p'
 alias up='sudo puppet agent --test'
 alias dstat-sum='dstat -cndymlp -N total -D total'
