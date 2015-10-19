@@ -15,45 +15,46 @@ class style::params {
   # Operating system specific definitions
   case $::osfamily {
     'RedHat' : {
-      $linux = true
-      $redhat = true
+      $linux                    = true
+      $redhat                   = true
 
       # Package definition
-      $packageRedhatLsb = 'redhat-lsb-core'
-      $packageVim       = 'vim-enhanced'
-      $packageXauth     = 'xorg-x11-xauth'
+      $package_redhat_lsb       = 'redhat-lsb-core'
+      $package_vim              = 'vim-enhanced'
+      $package_xauth            = 'xorg-x11-xauth'
 
     }
     'Debian' : {
-      $linux = true
-      $debian = true
+      $linux                    = true
+      $debian                   = true
 
       # Package definition
-      $packageVim       = 'vim'
-      $packageXauth     = 'xauth'
+      $package_vim              = 'vim'
+      $package_xauth            = 'xauth'
     }
     default  : {
-      $linux = false
+      $linux                    = false
     }
   }
 
   # Style package definition
-  $packageDmidecode          = 'dmidecode'
-  $packageDstat              = 'dstat'
-  $packageGlances            = 'glances'
-  $packageIftop              = 'iftop'
-  $packageIotop              = 'iotop'
-  $packageHtop               = 'htop'
-  $packageNcftp              = 'ncftp'
-  $packageNmap               = 'nmap'
-  $packageRsync              = 'rsync'
-  $packageScreen             = 'screen'
-  $packageStrace             = 'strace'
-  $packageTree               = 'tree'
-  $packageUnzip              = 'unzip'
-  $packageWget               = 'wget'
+  $package_dmidecode            = 'dmidecode'
+  $package_dstat                = 'dstat'
+  $package_glances              = 'glances'
+  $package_iftop                = 'iftop'
+  $package_iotop                = 'iotop'
+  $package_htop                 = 'htop'
+  $package_ncftp                = 'ncftp'
+  $package_nmap                 = 'nmap'
+  $package_pv                   = 'pv'
+  $package_rsync                = 'rsync'
+  $package_screen               = 'screen'
+  $package_strace               = 'strace'
+  $package_tree                 = 'tree'
+  $package_unzip                = 'unzip'
+  $package_wget                 = 'wget'
 
   # Config definition
-  $configProfileConf         = '/etc/profile.d/custom.sh'
-  $configProfileConfTemplate = 'style/etc/profile.d/custom.sh.erb'
+  $config_profile_conf          = '/etc/profile.d/custom.sh'
+  $config_profile_conf_template = 'style/etc/profile.d/custom.sh.erb'
 }

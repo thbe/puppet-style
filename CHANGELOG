@@ -1,3 +1,7 @@
+0.3.5 2015-10-19 thbe <project@bendler-net.de>
+ * Add pv
+ * Change variable style to match 4.x puppet-lint requirements
+
 0.3.4 2015-10-19 thbe <project@bendler-net.de>
  * Fixed typo in custom.sh
 

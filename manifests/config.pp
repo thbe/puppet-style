@@ -14,12 +14,12 @@ class style::config {
 
   # Setup configuration files
   file {
-    $style::params::configProfileConf:
+    $style::params::config_profile_conf:
       ensure  => present,
       mode    => '0644',
       owner   => root,
       group   => root,
-      path    => $style::params::configProfileConf,
-      content => template($style::params::configProfileConfTemplate);
+      path    => $style::params::config_profile_conf,
+      content => template($style::params::config_profile_conf_template);
   }
 }
