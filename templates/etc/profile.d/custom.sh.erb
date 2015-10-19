@@ -103,8 +103,10 @@ alias ls='ls --color=auto -CF -h'
 alias ll='ls -l'
 alias la='ll -a'
 
-if [ ! -x /usr/bin/puppet && -l /opt/puppetlabs/bin/puppet ]; then
-  alias puppet='/opt/puppetlabs/bin/puppet'
+if [ ! -x /usr/bin/puppet ]; then
+  if [ -l /opt/puppetlabs/bin/puppet ]; then
+    alias puppet='/opt/puppetlabs/bin/puppet'
+  fi
 fi
 alias facter='facter -p'
 alias up='sudo puppet agent --test'

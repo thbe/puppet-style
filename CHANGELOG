@@ -1,3 +1,6 @@
+0.3.4 2015-10-19 thbe <project@bendler-net.de>
+ * Fixed typo in custom.sh
+
 0.3.3 2015-10-19 thbe <project@bendler-net.de>
  * Add glances
 
