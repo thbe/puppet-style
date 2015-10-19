@@ -15,6 +15,8 @@ class style::package {
 
   package { $style::params::packageDstat: ensure => installed; }
 
+  package { $style::params::packageGlances: ensure => installed; }
+
   package { $style::params::packageIftop: ensure => installed; }
 
   package { $style::params::packageIotop: ensure => installed; }

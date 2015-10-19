@@ -1,3 +1,6 @@
+0.3.3 2015-10-19 thbe <project@bendler-net.de>
+ * Add glances
+
 0.3.2 2015-10-09 thbe <project@bendler-net.de>
  * Add switch for puppet agent
 

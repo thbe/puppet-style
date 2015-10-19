@@ -40,6 +40,7 @@ class style::params {
   # Style package definition
   $packageDmidecode          = 'dmidecode'
   $packageDstat              = 'dstat'
+  $packageGlances            = 'glances'
   $packageIftop              = 'iftop'
   $packageIotop              = 'iotop'
   $packageHtop               = 'htop'
