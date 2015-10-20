@@ -51,9 +51,9 @@ This module has been built on and tested against Puppet 3.7 and higher.
 
 The module has been tested on:
 
-* RedHat Enterprise Linux 6/7
-* Scientific Linux 6/7
-* CentOS Linux 6/7
+* RedHat Enterprise Linux 5/6/7
+* Scientific Linux 5/6/7
+* CentOS Linux 5/6/7
 * Ubuntu 14.04 LTS
 
 Testing on other platforms has been light and cannot be guaranteed.

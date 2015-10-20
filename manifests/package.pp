@@ -15,8 +15,6 @@ class style::package {
 
   package { $style::params::package_dstat: ensure => installed; }
 
-  package { $style::params::package_glances: ensure => installed; }
-
   package { $style::params::package_iftop: ensure => installed; }
 
   package { $style::params::package_iotop: ensure => installed; }
@@ -44,6 +42,10 @@ class style::package {
   package { $style::params::package_wget: ensure => installed; }
 
   package { $style::params::package_xauth: ensure => installed; }
+
+  if $style::params::package_glances {
+    package { $style::params::package_glances: ensure => installed; }
+  }
 
   if $style::params::redhat {
     package { $style::params::package_redhat_lsb: ensure => installed; }

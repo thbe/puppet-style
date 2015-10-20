@@ -19,9 +19,14 @@ class style::params {
       $redhat                   = true
 
       # Package definition
-      $package_redhat_lsb       = 'redhat-lsb-core'
       $package_vim              = 'vim-enhanced'
       $package_xauth            = 'xorg-x11-xauth'
+      if $::lsbmajdistrelease == '5' {
+        $package_redhat_lsb     = 'redhat-lsb'
+      } else {
+        $package_redhat_lsb     = 'redhat-lsb-core'
+        $package_glances        = 'glances'
+      }
 
     }
     'Debian' : {
@@ -31,6 +36,7 @@ class style::params {
       # Package definition
       $package_vim              = 'vim'
       $package_xauth            = 'xauth'
+      $package_glances          = 'glances'
     }
     default  : {
       $linux                    = false
@@ -40,7 +46,6 @@ class style::params {
   # Style package definition
   $package_dmidecode            = 'dmidecode'
   $package_dstat                = 'dstat'
-  $package_glances              = 'glances'
   $package_iftop                = 'iftop'
   $package_iotop                = 'iotop'
   $package_htop                 = 'htop'
