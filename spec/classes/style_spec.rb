@@ -37,12 +37,12 @@ describe "style" do
       when 'RedHat'
         it { is_expected.to contain_package('vim-enhanced') }
         it { is_expected.to contain_package('xorg-x11-xauth') }
-        case facts[:lsbmajdistrelease]
-        when '5'
+        if facts[:lsbmajdistrelease] = '5'
           it { is_expected.to contain_package('redhat-lsb') }
         else
           it { is_expected.to contain_package('redhat-lsb-core') }
           it { is_expected.to contain_package('glances') }
+        end
       else
         it { is_expected.to contain_warning('The current operating system is not supported!') }
       end
