@@ -21,6 +21,8 @@ class style::package {
 
   package { $style::params::package_htop: ensure => installed; }
 
+  package { $style::params::package_ncdu: ensure => installed; }
+
   package { $style::params::package_ncftp: ensure => installed; }
 
   package { $style::params::package_nmap: ensure => installed; }

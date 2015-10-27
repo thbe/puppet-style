@@ -1,5 +1,9 @@
 # style
 
+[![Build Status](https://travis-ci.org/thbe/puppet-style.png?branch=master)](https://travis-ci.org/thbe/puppet-style)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/thbe/style.svg)](https://forge.puppetlabs.com/thbe/style)
+[![Coverage Status](https://coveralls.io/repos/thbe/puppet-style/badge.svg?branch=master&service=github)](https://coveralls.io/github/thbe/puppet-style?branch=master)
+
 #### Table of Contents
 
 1. [Overview](#overview)

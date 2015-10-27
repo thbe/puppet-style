@@ -34,4 +34,7 @@ class style inherits style::params {
     Class['style::package'] ->
     Class['style::config']
   }
+  else {
+    warning('The current operating system is not supported!')
+  }
 }
