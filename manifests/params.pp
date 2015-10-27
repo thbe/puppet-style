@@ -46,9 +46,9 @@ class style::params {
   # Style package definition
   $package_dmidecode            = 'dmidecode'
   $package_dstat                = 'dstat'
+  $package_htop                 = 'htop'
   $package_iftop                = 'iftop'
   $package_iotop                = 'iotop'
-  $package_htop                 = 'htop'
   $package_ncdu                 = 'ncdu'
   $package_ncftp                = 'ncftp'
   $package_nmap                 = 'nmap'
