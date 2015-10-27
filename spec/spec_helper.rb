@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require 'puppetlabs_spec_helper/module_spec_helper'
 
 require 'rspec-puppet'
@@ -6,8 +9,6 @@ include RspecPuppetFacts
 
 require 'simplecov'
 require 'simplecov-console'
-require 'coveralls'
-Coveralls.wear!
 
 SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start do
