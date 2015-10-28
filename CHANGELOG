@@ -1,3 +1,6 @@
+0.5.6 2015-10-28 thbe <project@bendler-net.de>
+ * Update documentation
+
 0.5.5 2015-10-27 thbe <project@bendler-net.de>
  * Add ncdu support
  * Add rspec and CI support
