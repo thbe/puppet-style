@@ -104,7 +104,7 @@ alias ll='ls -l'
 alias la='ll -a'
 
 if [ ! -x /usr/bin/puppet ]; then
-  if [ -l /opt/puppetlabs/bin/puppet ]; then
+  if [ -L /opt/puppetlabs/bin/puppet ]; then
     alias puppet='/opt/puppetlabs/bin/puppet'
   fi
 fi
