@@ -1,3 +1,6 @@
+0.5.8 2015-11-25 thbe <project@bendler-net.de>
+ * Add sudo_root_X function
+
 0.5.7 2015-11-25 thbe <project@bendler-net.de>
  * Fix symlink test in template
 

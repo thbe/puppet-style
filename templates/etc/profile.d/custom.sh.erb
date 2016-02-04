@@ -41,12 +41,18 @@ else
   PS1="\[\033[${USER_COLOR}m\]\u@${HOST_NAME}\[\033[34m\] \w\[\033[00m\]$ "
 fi
 
-# Function to execute command on all hosts returned by mco
-distributedCommand() {
+# Function to execute command on all hosts
+mcoCommand() {
   for item in $( mco facts fqdn --json | sed -e 's/  */ /g' | cut -d ' ' -f2 | tail -n+3); do
     echo "${item}:"
     ssh -t ${item} "$@"
   done
+}
+ansibleCommand() {
+  ansible all -o -m shell -a "$@" -f 10
+}
+ansibleRootCommand() {
+  ansible all -o -m shell -a "sudo $@" -f 10
 }
 
 # Small helpers
@@ -141,6 +147,17 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias excuse='echo `telnet bofh.jeffballard.us 666 2>/dev/null` |grep --color -o "Your excuse is:.*$"'
 alias starwars='telnet towel.blinkenlights.nl'
 alias ssh='ssh -X'
+
+# Set magic cookie and display for root after sudo
+sudo_root_X() {
+  if [ $(id -u) -eq 0 ]; then
+    SUDO_USER=$(ps -p $(ps -p $(ps -p $(ps -p ${1:-$$} -o ppid=) -o ppid=) -o ppid=) -o user=)
+    if [ ! -r ${HOME}/.Xauthority ]; then
+      touch ${HOME}/.Xauthority
+    fi
+    xauth -f /home/${SUDO_USER}/.Xauthority list| grep ":$(echo $DISPLAY | cut -d ':' -f2 | cut -d '.' -f1)" | xargs -n 3 xauth add
+  fi
+}
 
 # Host information
 ii() {
