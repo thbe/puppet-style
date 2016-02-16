@@ -1,3 +1,6 @@
+0.5.9 2016-02-16 thbe <project@bendler-net.de>
+ * Fix path for new puppet agent
+
 0.5.8 2015-11-25 thbe <project@bendler-net.de>
  * Add sudo_root_X function
 

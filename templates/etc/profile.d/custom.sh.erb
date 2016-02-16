@@ -111,11 +111,14 @@ alias la='ll -a'
 
 if [ ! -x /usr/bin/puppet ]; then
   if [ -L /opt/puppetlabs/bin/puppet ]; then
-    alias puppet='/opt/puppetlabs/bin/puppet'
+    PUPPET_LOCATION=/opt/puppetlabs/bin
+  else
+    PUPPET_LOCATION=/usr/bin
   fi
 fi
-alias facter='facter -p'
-alias up='sudo puppet agent --test'
+alias puppet="${PUPPET_LOCATION}/puppet"
+alias facter="${PUPPET_LOCATION}/facter -p"
+alias up="sudo ${PUPPET_LOCATION}/puppet agent --test"
 alias dstat-sum='dstat -cndymlp -N total -D total'
 alias netstat-routing='netstat -rn'
 alias netstat-listening='netstat -an | grep -E "tcp|udp"'

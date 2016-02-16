@@ -20,7 +20,7 @@
 #
 # === Copyright
 #
-# Copyright 2015 Thomas Bendler, unless otherwise noted.
+# Copyright 2016 Thomas Bendler, unless otherwise noted.
 #
 class style inherits style::params {
 
