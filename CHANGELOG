@@ -1,3 +1,6 @@
+0.5.10 2016-02-22 thbe <project@bendler-net.de>
+ * Fix path for old puppet agent
+
 0.5.9 2016-02-16 thbe <project@bendler-net.de>
  * Fix path for new puppet agent
 
