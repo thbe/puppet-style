@@ -10,8 +10,11 @@ describe "style" do
 
       it { is_expected.to compile.with_all_deps }
 
+      it { is_expected.to contain_class('style') }
+      it { is_expected.to contain_class('style::params') }
       it { is_expected.to contain_class('style::package') }
       it { is_expected.to contain_class('style::config') }
+
       it { is_expected.to contain_package('dmidecode') }
       it { is_expected.to contain_package('dstat') }
       it { is_expected.to contain_package('htop') }
