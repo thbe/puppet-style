@@ -12,7 +12,7 @@ describe "style" do
 
       it { is_expected.to contain_class('style') }
       it { is_expected.to contain_class('style::params') }
-      it { is_expected.to contain_class('style::package') }
+      it { is_expected.to contain_class('style::install') }
       it { is_expected.to contain_class('style::config') }
 
       it { is_expected.to contain_package('dmidecode') }
@@ -40,11 +40,14 @@ describe "style" do
       when 'RedHat'
         it { is_expected.to contain_package('vim-enhanced') }
         it { is_expected.to contain_package('xorg-x11-xauth') }
-        if facts[:lsbmajdistrelease] = '5'
+        if facts[:operatingsystemmajrelease] = '5'
           it { is_expected.to contain_package('redhat-lsb') }
         else
           it { is_expected.to contain_package('glances') }
           it { is_expected.to contain_package('redhat-lsb-core') }
+        end
+        if facts[:operatingsystemmajrelease] = '7'
+          it { is_expected.to contain_package('system-storage-manager') }
         end
       else
         it { is_expected.to contain_warning('The current operating system is not supported!') }

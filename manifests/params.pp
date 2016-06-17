@@ -15,31 +15,32 @@ class style::params {
   # Operating system specific definitions
   case $::osfamily {
     'RedHat' : {
-      $linux                    = true
-      $redhat                   = true
+      $linux                          = true
+      $redhat                         = true
 
       # Package definition
-      $package_vim              = 'vim-enhanced'
-      $package_xauth            = 'xorg-x11-xauth'
-      if $::lsbmajdistrelease == '5' {
-        $package_redhat_lsb     = 'redhat-lsb'
+      $package_vim                    = 'vim-enhanced'
+      $package_system_storage_manager = 'system-storage-manager'
+      $package_xauth                  = 'xorg-x11-xauth'
+      if $::operatingsystemmajrelease == '5' {
+        $package_redhat_lsb           = 'redhat-lsb'
       } else {
-        $package_redhat_lsb     = 'redhat-lsb-core'
-        $package_glances        = 'glances'
+        $package_redhat_lsb           = 'redhat-lsb-core'
+        $package_glances              = 'glances'
       }
 
     }
     'Debian' : {
-      $linux                    = true
-      $debian                   = true
+      $linux                          = true
+      $debian                         = true
 
       # Package definition
-      $package_vim              = 'vim'
-      $package_xauth            = 'xauth'
-      $package_glances          = 'glances'
+      $package_vim                    = 'vim'
+      $package_xauth                  = 'xauth'
+      $package_glances                = 'glances'
     }
     default  : {
-      $linux                    = false
+      $linux                          = false
     }
   }
 

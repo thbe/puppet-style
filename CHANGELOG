@@ -1,3 +1,6 @@
+0.6.0 2016-06-17 thbe <project@bendler-net.de>
+ * Rewrite module strcuture
+
 0.5.10 2016-02-22 thbe <project@bendler-net.de>
  * Fix path for old puppet agent
 

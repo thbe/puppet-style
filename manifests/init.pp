@@ -26,13 +26,9 @@ class style inherits style::params {
 
   # Start workflow
   if $style::params::linux {
-    # Containment
-    contain style::package
-    contain style::config
-
-    # Include classes
-    Class['style::package'] ->
-    Class['style::config']
+    class{'style::install': } ->
+    class{'style::config': } ->
+    Class['style']
   }
   else {
     warning('The current operating system is not supported!')
