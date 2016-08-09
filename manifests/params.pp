@@ -19,6 +19,7 @@ class style::params {
       $redhat                         = true
 
       # Package definition
+      $package_nfs_utils              = 'nfs-utils'
       $package_vim                    = 'vim-enhanced'
       $package_system_storage_manager = 'system-storage-manager'
       $package_xauth                  = 'xorg-x11-xauth'
@@ -56,6 +57,7 @@ class style::params {
   $package_pv                   = 'pv'
   $package_rsync                = 'rsync'
   $package_screen               = 'screen'
+  $package_sslscan              = 'sslscan'
   $package_strace               = 'strace'
   $package_tree                 = 'tree'
   $package_unzip                = 'unzip'

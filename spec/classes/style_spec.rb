@@ -26,6 +26,7 @@ describe "style" do
       it { is_expected.to contain_package('pv') }
       it { is_expected.to contain_package('rsync') }
       it { is_expected.to contain_package('screen') }
+      it { is_expected.to contain_package('sslscan') }
       it { is_expected.to contain_package('strace') }
       it { is_expected.to contain_package('tree') }
       it { is_expected.to contain_package('unzip') }
@@ -38,15 +39,19 @@ describe "style" do
         it { is_expected.to contain_package('vim') }
         it { is_expected.to contain_package('xauth') }
       when 'RedHat'
+        it { is_expected.to contain_package('nfs-utils') }
         it { is_expected.to contain_package('vim-enhanced') }
         it { is_expected.to contain_package('xorg-x11-xauth') }
-        if facts[:operatingsystemmajrelease] = '5'
+        if facts[:operatingsystemmajrelease] == '5'
           it { is_expected.to contain_package('redhat-lsb') }
-        else
+        end
+        if facts[:operatingsystemmajrelease] == '6'
           it { is_expected.to contain_package('glances') }
           it { is_expected.to contain_package('redhat-lsb-core') }
         end
-        if facts[:operatingsystemmajrelease] = '7'
+        if facts[:operatingsystemmajrelease] == '7'
+          it { is_expected.to contain_package('glances') }
+          it { is_expected.to contain_package('redhat-lsb-core') }
           it { is_expected.to contain_package('system-storage-manager') }
         end
       else
