@@ -51,7 +51,9 @@ describe "style" do
         end
         if facts[:operatingsystemmajrelease] == '7'
           it { is_expected.to contain_package('glances') }
+          it { is_expected.to contain_package('genisoimage') }
           it { is_expected.to contain_package('redhat-lsb-core') }
+          it { is_expected.to contain_package('syslinux') }
           it { is_expected.to contain_package('system-storage-manager') }
         end
       else

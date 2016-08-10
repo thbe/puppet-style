@@ -19,15 +19,17 @@ class style::params {
       $redhat                         = true
 
       # Package definition
+      $package_genisoimage            = 'genisoimage'
+      $package_glances                = 'glances'
       $package_nfs_utils              = 'nfs-utils'
       $package_vim                    = 'vim-enhanced'
+      $package_syslinux               = 'syslinux'
       $package_system_storage_manager = 'system-storage-manager'
       $package_xauth                  = 'xorg-x11-xauth'
       if $::operatingsystemmajrelease == '5' {
         $package_redhat_lsb           = 'redhat-lsb'
       } else {
         $package_redhat_lsb           = 'redhat-lsb-core'
-        $package_glances              = 'glances'
       }
 
     }
