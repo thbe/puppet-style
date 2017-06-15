@@ -109,14 +109,14 @@ alias ls='ls --color=auto -CF -h'
 alias ll='ls -l'
 alias la='ll -a'
 
-if [ ! -x /usr/bin/puppet ]; then
+if [ -x /usr/bin/puppet ]; then
+  PUPPET_LOCATION=/usr/bin
+else
   if [ -L /opt/puppetlabs/bin/puppet ]; then
     PUPPET_LOCATION=/opt/puppetlabs/bin
   else
     PUPPET_LOCATION=/usr/local/bin
   fi
-else
-  PUPPET_LOCATION=/usr/bin
 fi
 alias puppet="${PUPPET_LOCATION}/puppet"
 alias facter="${PUPPET_LOCATION}/facter -p"
