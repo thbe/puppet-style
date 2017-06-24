@@ -1,12 +1,9 @@
 require 'spec_helper'
 
-describe "style" do
-
+describe "style", :type => :class do
   on_supported_os.each do |os, facts|
     context "on #{os}" do
-      let(:facts) do
-        facts
-      end
+      let(:facts) { facts }
 
       it { is_expected.to compile.with_all_deps }
 
@@ -31,6 +28,7 @@ describe "style" do
       it { is_expected.to contain_package('tree') }
       it { is_expected.to contain_package('unzip') }
       it { is_expected.to contain_package('wget') }
+
       it { is_expected.to contain_file('/etc/profile.d/custom.sh') }
 
       case facts[:osfamily]

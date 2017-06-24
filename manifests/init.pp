@@ -20,15 +20,15 @@
 #
 # === Copyright
 #
-# Copyright 2016 Thomas Bendler, unless otherwise noted.
+# Copyright 2017 Thomas Bendler, unless otherwise noted.
 #
 class style inherits style::params {
 
   # Start workflow
   if $style::params::linux {
-    class{'style::install': } ->
-    class{'style::config': } ->
-    Class['style']
+    class{ '::style::install': }
+    -> class{ '::style::config': }
+    -> Class['style']
   }
   else {
     warning('The current operating system is not supported!')

@@ -30,7 +30,7 @@ class style::install {
   package { $style::params::package_wget:                        ensure => installed; }
   package { $style::params::package_xauth:                       ensure => installed; }
 
-  if $style::params::redhat {
+  if $::osfamily == 'RedHat' {
     package { $style::params::package_redhat_lsb:                ensure => installed; }
     package { $style::params::package_nfs_utils:                 ensure => installed; }
     if $::operatingsystemmajrelease == '6' {
@@ -43,7 +43,7 @@ class style::install {
       package { $style::params::package_system_storage_manager:  ensure => installed; }
     }
   }
-  if $style::params::debian {
+  if $::osfamily == 'Debian' {
     package { $style::params::package_glances:                   ensure => installed; }
   }
 }

@@ -16,7 +16,6 @@ class style::params {
   case $::osfamily {
     'RedHat' : {
       $linux                          = true
-      $redhat                         = true
 
       # Package definition
       $package_genisoimage            = 'genisoimage'
@@ -35,7 +34,6 @@ class style::params {
     }
     'Debian' : {
       $linux                          = true
-      $debian                         = true
 
       # Package definition
       $package_vim                    = 'vim'
