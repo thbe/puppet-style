@@ -1,6 +1,6 @@
 require 'spec_helper_acceptance'
 
-describe 'yum' do
+describe 'style' do
   it 'should apply without errors' do
     apply_manifest(manifest, :catch_failures => true)
   end
