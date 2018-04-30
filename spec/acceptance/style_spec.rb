@@ -1,6 +1,12 @@
 require 'spec_helper_acceptance'
 
 describe 'style' do
+  let(:manifest) {
+    <<-CLASSPARAMETER
+class { 'style': }
+CLASSPARAMETER
+  }
+
   it 'should apply without errors' do
     apply_manifest(manifest, :catch_failures => true)
   end
